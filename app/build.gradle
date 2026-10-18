@@ -1,0 +1,66 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+// Gizli anahtarlar local.properties dosyasından okunur (bu dosya GitHub'a gönderilmez)
+def localProps = new Properties()
+def localPropsFile = rootProject.file('local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
+}
+
+android {
+    namespace 'com.gizlirotalar.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gizlirotalar.app"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "IMGBB_API_KEY", "\"${localProps.getProperty('IMGBB_API_KEY', '')}\""
+        buildConfigField "String", "ADMIN_EMAILS", "\"${localProps.getProperty('ADMIN_EMAILS', '')}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+        encoding 'UTF-8'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // OSMDroid
+    implementation 'org.osmdroid:osmdroid-android:6.1.20'
+
+    // Firebase BOM
+    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+
+    // Google Play Services Location (for GPS)
+    implementation 'com.google.android.gms:play-services-location:21.2.0'
+
+    // Preference for OSMDroid
+    implementation 'androidx.preference:preference:1.2.1'
+    
+    // Glide for image loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+}

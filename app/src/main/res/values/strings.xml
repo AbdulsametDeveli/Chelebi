@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Chelebi</string>
+    <string name="login_title">Giriş Yap</string>
+    <string name="email">E-posta</string>
+    <string name="password">Şifre</string>
+    <string name="login_button">Giriş Yap</string>
+    <string name="register_button">Kayıt Ol</string>
+    <string name="admin_login">Yönetici Girişi</string>
+    
+    <string name="register_title">Yeni Hesap Oluştur</string>
+    <string name="name">Ad Soyad</string>
+    
+    <string name="add_spot_title">Yeni Nokta Ekle</string>
+    <string name="spot_name">Nokta Adı</string>
+    <string name="spot_description">Açıklama</string>
+    <string name="category">Kategori</string>
+    <string name="difficulty">Zorluk Seviyesi</string>
+    <string name="is_dangerous">Tehlikeli Bölge Mi?</string>
+    <string name="image_url">Fotoğraf URL</string>
+    <string name="save">Kaydet</string>
+    
+    <string name="admin_panel">Yönetici Paneli</string>
+    
+    <string name="error_empty_fields">Lütfen tüm alanları doldurun.</string>
+
+    <!-- Profil -->
+    <string name="profile_title">Profilim</string>
+    <string name="profile_account_info">Hesap Bilgileri</string>
+    <string name="profile_email">E-posta</string>
+    <string name="profile_role">Rol</string>
+    <string name="profile_date">Kayıt Tarihi</string>
+    <string name="profile_logout">Çıkış Yap</string>
+    <string name="role_admin">Yönetici</string>
+    <string name="role_user">Kullanıcı</string>
+
+    <!-- Filtre -->
+    <string name="filter_all">Tümü</string>
+    <string name="filter_label">Filtre:</string>
+    <string name="no_access">Bu sayfaya erişim yetkiniz yok!</string>
+</resources>

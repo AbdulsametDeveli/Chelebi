@@ -1,0 +1,6 @@
+# Bu dosyayı "local.properties" adıyla kopyalayıp kendi değerlerinle doldur.
+# local.properties GitHub'a gönderilmez (.gitignore içinde).
+sdk.dir=C\:\\Users\\KULLANICI\\AppData\\Local\\Android\\Sdk
+IMGBB_API_KEY=your_imgbb_api_key_here
+# Yönetici yetkisi verilecek e-postalar (virgülle ayır)
+ADMIN_EMAILS=admin@ornek.com
